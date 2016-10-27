@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+    <head>
+		<meta charset="UTF-8">
+		<base href="/">
+        <title>Liste film</title>
+
+		<link rel="stylesheet" href="/dist/bootstrap/dist/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/static/css/style.css">
+		<!-- JS -->
+		<script src="/dist/angular/angular.js"></script>
+		<script src="/dist/angular-route/angular-route.js"></script>
+
+		<!-- ANGULAR CUSTOM -->
+		<script src="/static/js/services.js"></script>
+		<script src="/static/js/controllers.js"></script>
+		<script src="/static/js/appRoutes.js"></script>
+		<script src="/static/js/app.js"></script>
+    </head>
+
+    <body ng-app="mihajaApp" ng-controller="FilmCtrl" ng-init="initialiser()">
+		<div class="container">
+		
+			<!-- HEADER -->
+			<nav class="navbar navbar-inverse">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="/">Gestion de film</a>
+				</div>
+				<ul class="nav navbar-nav">
+					<li><a href="/">Lister</a></li>
+					<li><a href="/ajouter">Ajouter</a></li>
+				</ul>
+			</nav>
+
+			<!-- ANGULAR DYNAMIC CONTENT -->
+			<div ng-view></div>
+
+			<!-- FOOTER -->
+			<div class="row">
+				<hr>
+				<div class="col-lg-12">
+					<div class="col-md-8">
+						<a href="/">Lister</a> | <a href="/ajouter">Ajouter</a>    
+					</div>
+					<div class="col-md-4">
+						<p class="muted pull-right">© 2016 Mihaja Rajaonarivelo. All rights reserved</p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+    </body>
+</html>

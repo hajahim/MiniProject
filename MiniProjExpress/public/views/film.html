@@ -1,0 +1,26 @@
+<div class="pageSelector">
+	<div class="row">
+		<h1>Liste des films disponible</h1>
+		<p>Une petite application, avec Node.js, Express.js et Angular JS</p>
+	</div>
+	<div class="row">
+		<div class="col-md-12 col-lg-12">
+			<ul class="media-list main-list">
+				<li class="media" ng-repeat="film in films">
+					<a class="pull-left" href="#">
+						<img class="media-object" ng-src="{{film.image}}" alt="...">
+					</a>
+					<div class="media-body">
+						<h4 class="media-heading">{{film.titre}}</h4>
+						<p class="by-author">{{film.description}}</p>
+					</div>
+					<div class="media-footer">
+						<p>
+							<a style="color: red;" ng-click="supprimer(film)">Supprimer</a>
+							<a ng-href="/detail/{{film.idFilm}}">Details</a></p>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

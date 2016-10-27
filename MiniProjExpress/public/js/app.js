@@ -1,0 +1,1 @@
+angular.module('mihajaApp', ['ngRoute', 'appRoutes', 'mihajaApp.controllers', 'mihajaApp.services']);
